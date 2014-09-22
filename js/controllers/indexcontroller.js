@@ -2,7 +2,7 @@ angular.module('EpamHistory')
   .controller('IndexController', ['$scope', function($scope) {
     var axises = [
       "English",
-      "Overall Eveluation",
+      "Overall Evaluation",
       "Title",
       "Time at EPAM",
       "Visa Records",
