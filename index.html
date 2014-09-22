@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/bower_components/jquery-ui/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="/bower_components/vis/dist/vis.css">
+    <link rel="stylesheet" href="/css/app.css">
+  </head>
+  <body data-ng-app="EpamHistory" data-ng-controller="IndexController">
+    <div class="page-header">
+      <h1>Technical Proof of Concept <small>Employee KPIs Overview + Timeline (key events + KPIs)</small></h1>
+    </div>
+    <button ng-click="generateData()">Generate Data</button>
+
+    <br />
+    <br />
+    <div class="row">
+      <div class="col-md-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">History</div>
+          <div class="panel-body">
+            <div data-streamchart layers="layers" class='streamchart'></div>
+            <div data-timeline></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div class="panel panel-default">
+          <div class="panel-heading">Parameters</div>
+          <div class="panel-body">
+            <table width="100%" style="margin-bottom: 10px;">
+              <tr>
+                <td>Me vs Nearby</td>
+                <td style="text-align:center">Me vs Similar Profile</td>
+                <td align="right">Me vs Avg</td>
+              </tr>
+            </table>
+            <div ui-slider min="0" max="2" step="1" ng-model="value"></div>
+            <br />
+            <div data-radar person-parameters="personParameters" average-parameters="averageParameters"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/bower_components/jquery-ui/ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-ui-slider/src/slider.js"></script>
+    <script type="text/javascript" src="/bower_components/d3/d3.js"></script>
+    <script type="text/javascript" src="/bower_components/vis/dist/vis.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/config.js"></script>
+    <script type="text/javascript" src="/js/controllers/indexcontroller.js"></script>
+    <script type="text/javascript" src="/libs/radar.js"></script>
+    <script type="text/javascript" src="/libs/streamchart.js"></script>
+    <script type="text/javascript" src="/libs/timeline.js"></script>
+    <script type="text/javascript" src="/js/directives/radar.js"></script>
+    <!-- <script src="/js/directives/slider.js"></script> -->
+    <script type="text/javascript" src="/js/directives/streamchart.js"></script>
+    <script type="text/javascript" src="/js/directives/timeline.js"></script>
+  </body>
+</html>

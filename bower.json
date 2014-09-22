@@ -1,0 +1,23 @@
+{
+  "name": "epamhistory",
+  "version": "0.0.0",
+  "authors": [
+    "ptsurko <pavel.tsurko@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.4.11",
+    "angular": "~1.2.25",
+    "bootstrap": "~3.2.0",
+    "ng-slider": "~0.1.4",
+    "vis": "~3.5.0",
+    "angular-ui-slider": "~0.0.2"
+  }
+}
