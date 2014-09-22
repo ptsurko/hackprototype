@@ -1,0 +1,25 @@
+.timeline path,
+.timeline line {
+    stroke: black;
+}
+
+
+.scanLine {
+  stroke: red;
+}
+
+.event-info {
+  font-size: 10px;
+  list-style: none;
+  padding: 10px;
+}
+
+
+.popover {
+  position: absolute;
+  display: block;
+}
+
+body {
+  padding: 0 20px;
+}
